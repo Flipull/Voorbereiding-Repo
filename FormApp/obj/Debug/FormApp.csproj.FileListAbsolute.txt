@@ -1,0 +1,11 @@
+C:\Users\Mark\source\repos\FormApp\bin\Debug\FormApp.exe.config
+C:\Users\Mark\source\repos\FormApp\bin\Debug\FormApp.exe
+C:\Users\Mark\source\repos\FormApp\bin\Debug\FormApp.pdb
+C:\Users\Mark\source\repos\FormApp\obj\Debug\FormApp.csprojAssemblyReference.cache
+C:\Users\Mark\source\repos\FormApp\obj\Debug\FormApp.FlagsApp.resources
+C:\Users\Mark\source\repos\FormApp\obj\Debug\FormApp.Properties.Resources.resources
+C:\Users\Mark\source\repos\FormApp\obj\Debug\FormApp.csproj.GenerateResource.cache
+C:\Users\Mark\source\repos\FormApp\obj\Debug\FormApp.csproj.CoreCompileInputs.cache
+C:\Users\Mark\source\repos\FormApp\obj\Debug\FormApp.exe
+C:\Users\Mark\source\repos\FormApp\obj\Debug\FormApp.pdb
+C:\Users\Mark\source\repos\FormApp\obj\Debug\FormApp.AllFlags.resources

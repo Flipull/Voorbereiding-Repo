@@ -31,8 +31,10 @@ namespace EncryptionApp
         {
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                this.Text = new System.IO.StreamReader(openFileDialog1.FileName).ReadToEnd(); 
-                textBox2.Text = new System.IO.StreamReader(openFileDialog1.FileName).ReadToEnd();
+                EncrypedText = Encoding.ASCII.GetBytes(
+                                    new System.IO.StreamReader(openFileDialog1.FileName).ReadToEnd()
+                                );
+                textBox2.Text = Encoding.ASCII.GetString(EncrypedText).Replace("\0", "\\0");
             }
         }
 
@@ -42,7 +44,7 @@ namespace EncryptionApp
             {
                 this.Text = saveFileDialog1.FileName;
                 StreamWriter savefile = new System.IO.StreamWriter(saveFileDialog1.FileName);
-                savefile.Write(textBox2.Text);
+                savefile.Write(Encoding.ASCII.GetString(EncrypedText) );
                 savefile.Close();
             }
         }
@@ -59,16 +61,42 @@ namespace EncryptionApp
          */
 
 
+
+        byte[] EncryptionKeychain = new byte[3] { 149, 211, 35 };
+        byte[] RuntimeKeychain;
+        byte[] EncrypedText;
         private void EncryptText()
         {
-            //Base64: pseudo-encryption! No real encryption
+
             byte[] bytelist = Encoding.ASCII.GetBytes(textBox1.Text);
-            textBox2.Text = Convert.ToBase64String(bytelist);
+            for (int i = 0; i <bytelist.Length; i++)
+            {
+                byte curchar = bytelist[i];
+                foreach (byte ec in EncryptionKeychain)
+                {
+                    curchar = (byte)(curchar ^ ec);
+                }
+                bytelist[i] = curchar;
+            }
+            EncrypedText = bytelist;
+            textBox2.Text = Encoding.ASCII.GetString(EncrypedText).Replace("\0", "\\0");
+
         }
         private void DecryptText()
         {
-            //Base64: pseudo-encryption! No real encryption
-            byte[] bytelist = Convert.FromBase64String(textBox2.Text);
+            byte[] bytelist = EncrypedText;
+            
+            for (int i = 0; i < EncrypedText.Length; i++)
+            {
+                byte curchar = EncrypedText[i];
+
+                foreach (byte ec in EncryptionKeychain)
+                {
+                    curchar = (byte)(curchar ^ ec);
+                }
+                bytelist[i] = curchar;
+            }
+
             textBox1.Text = Encoding.ASCII.GetString(bytelist);
         }
 

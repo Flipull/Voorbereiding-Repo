@@ -1,0 +1,10 @@
+C:\Users\Mark\source\repos\OpleidingsInstituutApp\bin\Debug\OpleidingsInstituutApp.exe.config
+C:\Users\Mark\source\repos\OpleidingsInstituutApp\bin\Debug\OpleidingsInstituutApp.exe
+C:\Users\Mark\source\repos\OpleidingsInstituutApp\bin\Debug\OpleidingsInstituutApp.pdb
+C:\Users\Mark\source\repos\OpleidingsInstituutApp\obj\Debug\OpleidingsInstituutApp.csprojAssemblyReference.cache
+C:\Users\Mark\source\repos\OpleidingsInstituutApp\obj\Debug\OpleidingsInstituutApp.Form1.resources
+C:\Users\Mark\source\repos\OpleidingsInstituutApp\obj\Debug\OpleidingsInstituutApp.Properties.Resources.resources
+C:\Users\Mark\source\repos\OpleidingsInstituutApp\obj\Debug\OpleidingsInstituutApp.csproj.GenerateResource.cache
+C:\Users\Mark\source\repos\OpleidingsInstituutApp\obj\Debug\OpleidingsInstituutApp.csproj.CoreCompileInputs.cache
+C:\Users\Mark\source\repos\OpleidingsInstituutApp\obj\Debug\OpleidingsInstituutApp.exe
+C:\Users\Mark\source\repos\OpleidingsInstituutApp\obj\Debug\OpleidingsInstituutApp.pdb

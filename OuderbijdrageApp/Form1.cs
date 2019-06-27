@@ -25,22 +25,29 @@ namespace OuderbijdrageApp
             DateTime peildatum = dateTimePicker1.Value;
             TimeSpan tien_jaar_tijd = TimeSpan.FromDays(10 * 365);
 
-            byte kinder_aantal = 0, kinderen_tien_jaar_of_ouder = 0;
+            byte kinder_jonger_dan_tien_jaar = 0, kinderen_tien_jaar_of_ouder = 0;
             foreach (DateTime i in listBox1.Items)
             {
-                kinder_aantal++;
                 if (peildatum.Subtract(i) >= tien_jaar_tijd)
                 {
                     kinderen_tien_jaar_of_ouder++;
+                } else
+                {
+                    kinder_jonger_dan_tien_jaar++;
                 }
             }
-            kinder_aantal = Math.Min(kinder_aantal, (byte)3 );//maximaal ouderbijdrage voor 3 kinderen totaal.
-            kinderen_tien_jaar_of_ouder = Math.Min(kinderen_tien_jaar_of_ouder, (byte)2 );//maximaal ouderbijdrage voor 2 kinderen over de 10 jaar oud.
+            kinder_jonger_dan_tien_jaar = Math.Min(kinder_jonger_dan_tien_jaar, (byte)3 );//max bijdrage voor 3 kinderen. rest word kwijtgescholden
+            kinderen_tien_jaar_of_ouder = Math.Min(kinderen_tien_jaar_of_ouder, (byte)2 );//max bijdrage voor 2 kinderen (> 10 jaar). rest word kwijtgescholden.
 
-            float Ouderbijdrage = 50 + 25 * kinder_aantal + 12 * kinderen_tien_jaar_of_ouder;
+            float Ouderbijdrage = 50 + 25 * kinder_jonger_dan_tien_jaar + 37 * kinderen_tien_jaar_of_ouder;
 
-            if (kinder_aantal == 1)
-                Ouderbijdrage =  Ouderbijdrage * (3 / 4f);//25% korting
+            //limiet van 150 euro per ouderbijdrage
+            Ouderbijdrage = Math.Min(Ouderbijdrage, 150);
+
+            if (checkBox1.Checked)//== éénouder-gezin
+            {
+                Ouderbijdrage *=  (3/4f);
+            }
 
             label3.Text = "Totale Ouderbijdrage: € " + Ouderbijdrage;
         }
@@ -64,6 +71,11 @@ namespace OuderbijdrageApp
         {
             listBox1.Items.Clear();
 
+            CalculateOuderbijdrage();
+        }
+
+        private void CheckBox1_CheckedChanged(object sender, EventArgs e)
+        {
             CalculateOuderbijdrage();
         }
     }

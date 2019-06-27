@@ -1,0 +1,10 @@
+C:\Users\Mark\source\repos\OuderbijdrageApp\bin\Debug\OuderbijdrageApp.exe.config
+C:\Users\Mark\source\repos\OuderbijdrageApp\bin\Debug\OuderbijdrageApp.exe
+C:\Users\Mark\source\repos\OuderbijdrageApp\bin\Debug\OuderbijdrageApp.pdb
+C:\Users\Mark\source\repos\OuderbijdrageApp\obj\Debug\OuderbijdrageApp.csprojAssemblyReference.cache
+C:\Users\Mark\source\repos\OuderbijdrageApp\obj\Debug\OuderbijdrageApp.Form1.resources
+C:\Users\Mark\source\repos\OuderbijdrageApp\obj\Debug\OuderbijdrageApp.Properties.Resources.resources
+C:\Users\Mark\source\repos\OuderbijdrageApp\obj\Debug\OuderbijdrageApp.csproj.GenerateResource.cache
+C:\Users\Mark\source\repos\OuderbijdrageApp\obj\Debug\OuderbijdrageApp.csproj.CoreCompileInputs.cache
+C:\Users\Mark\source\repos\OuderbijdrageApp\obj\Debug\OuderbijdrageApp.exe
+C:\Users\Mark\source\repos\OuderbijdrageApp\obj\Debug\OuderbijdrageApp.pdb

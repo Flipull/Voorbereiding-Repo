@@ -1,0 +1,10 @@
+C:\Users\Mark\source\repos\SchijventariefInkomstenbelastingApp\bin\Debug\SchijventariefInkomstenbelastingApp.exe.config
+C:\Users\Mark\source\repos\SchijventariefInkomstenbelastingApp\bin\Debug\SchijventariefInkomstenbelastingApp.exe
+C:\Users\Mark\source\repos\SchijventariefInkomstenbelastingApp\bin\Debug\SchijventariefInkomstenbelastingApp.pdb
+C:\Users\Mark\source\repos\SchijventariefInkomstenbelastingApp\obj\Debug\SchijventariefInkomstenbelastingApp.csprojAssemblyReference.cache
+C:\Users\Mark\source\repos\SchijventariefInkomstenbelastingApp\obj\Debug\SchijventariefInkomstenbelastingApp.Form1.resources
+C:\Users\Mark\source\repos\SchijventariefInkomstenbelastingApp\obj\Debug\SchijventariefInkomstenbelastingApp.Properties.Resources.resources
+C:\Users\Mark\source\repos\SchijventariefInkomstenbelastingApp\obj\Debug\SchijventariefInkomstenbelastingApp.csproj.GenerateResource.cache
+C:\Users\Mark\source\repos\SchijventariefInkomstenbelastingApp\obj\Debug\SchijventariefInkomstenbelastingApp.csproj.CoreCompileInputs.cache
+C:\Users\Mark\source\repos\SchijventariefInkomstenbelastingApp\obj\Debug\SchijventariefInkomstenbelastingApp.exe
+C:\Users\Mark\source\repos\SchijventariefInkomstenbelastingApp\obj\Debug\SchijventariefInkomstenbelastingApp.pdb

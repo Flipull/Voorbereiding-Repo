@@ -1,0 +1,10 @@
+C:\Users\Mark\source\repos\FontChaosApp\bin\Debug\FontChaosApp.exe.config
+C:\Users\Mark\source\repos\FontChaosApp\bin\Debug\FontChaosApp.exe
+C:\Users\Mark\source\repos\FontChaosApp\bin\Debug\FontChaosApp.pdb
+C:\Users\Mark\source\repos\FontChaosApp\obj\Debug\FontChaosApp.csprojAssemblyReference.cache
+C:\Users\Mark\source\repos\FontChaosApp\obj\Debug\FontChaosApp.Form1.resources
+C:\Users\Mark\source\repos\FontChaosApp\obj\Debug\FontChaosApp.Properties.Resources.resources
+C:\Users\Mark\source\repos\FontChaosApp\obj\Debug\FontChaosApp.csproj.GenerateResource.cache
+C:\Users\Mark\source\repos\FontChaosApp\obj\Debug\FontChaosApp.csproj.CoreCompileInputs.cache
+C:\Users\Mark\source\repos\FontChaosApp\obj\Debug\FontChaosApp.exe
+C:\Users\Mark\source\repos\FontChaosApp\obj\Debug\FontChaosApp.pdb

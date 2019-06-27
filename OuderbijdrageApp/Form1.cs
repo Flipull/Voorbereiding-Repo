@@ -29,7 +29,6 @@ namespace OuderbijdrageApp
             foreach (DateTime i in listBox1.Items)
             {
                 kinder_aantal++;
-                TimeSpan tijdverschil = i.Subtract(peildatum);
                 if (peildatum.Subtract(i) >= tien_jaar_tijd)
                 {
                     kinderen_tien_jaar_of_ouder++;

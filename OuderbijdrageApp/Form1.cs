@@ -34,6 +34,8 @@ namespace OuderbijdrageApp
                     kinderen_tien_jaar_of_ouder++;
                 }
             }
+            kinder_aantal = Math.Min(kinder_aantal, (byte)3 );//maximaal ouderbijdrage voor 3 kinderen totaal.
+            kinderen_tien_jaar_of_ouder = Math.Min(kinderen_tien_jaar_of_ouder, (byte)2 );//maximaal ouderbijdrage voor 2 kinderen over de 10 jaar oud.
 
             float Ouderbijdrage = 50 + 25 * kinder_aantal + 12 * kinderen_tien_jaar_of_ouder;
 

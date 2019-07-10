@@ -13,6 +13,8 @@ namespace EncryptionApp
 {
     public partial class Form1 : Form
     {
+        private Encryption EncryptObject = new Encryption();
+        private static byte[] HARDCODED_PASSWORD = Encoding.ASCII.GetBytes("Hallo");
         public Form1()
         {
             InitializeComponent();
@@ -31,10 +33,10 @@ namespace EncryptionApp
         {
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                EncrypedText = Encoding.ASCII.GetBytes(
+                EncryptedText = Encoding.ASCII.GetBytes(
                                     new System.IO.StreamReader(openFileDialog1.FileName).ReadToEnd()
                                 );
-                textBox2.Text = Encoding.ASCII.GetString(EncrypedText).Replace("\0", "\\0");
+                textBox2.Text = Encoding.ASCII.GetString(EncryptedText).Replace("\0", "\\0");
             }
         }
 
@@ -44,65 +46,23 @@ namespace EncryptionApp
             {
                 this.Text = saveFileDialog1.FileName;
                 StreamWriter savefile = new System.IO.StreamWriter(saveFileDialog1.FileName);
-                savefile.Write(Encoding.ASCII.GetString(EncrypedText) );
+                savefile.Write(Encoding.ASCII.GetString(EncryptedText) );
                 savefile.Close();
             }
         }
 
+        byte[] EncryptedText= new byte[0];//variable introduced because TextBox-UI elements can't display null-bytes
         private void Button1_Click(object sender, EventArgs e)
         {
-            EncryptText();
+            EncryptedText = EncryptObject.XorEncrypt(Encoding.ASCII.GetBytes(textBox1.Text), HARDCODED_PASSWORD);
+            textBox2.Text = Encoding.ASCII.GetString(EncryptedText).Replace("\0", "\\0");
         }
-
-
-        /*
-         * encrypt; [0..255] => [33..65][33..65]
-         *          [0..2^8] => [2^4+1..2^5+1][2^4+1..2^5+1]
-         */
-
-
-
-        byte[] EncryptionKeychain = new byte[3] { 149, 211, 35 };
-        byte[] RuntimeKeychain;
-        byte[] EncrypedText;
-        private void EncryptText()
-        {
-
-            byte[] bytelist = Encoding.ASCII.GetBytes(textBox1.Text);
-            for (int i = 0; i <bytelist.Length; i++)
-            {
-                byte curchar = bytelist[i];
-                foreach (byte ec in EncryptionKeychain)
-                {
-                    curchar = (byte)(curchar ^ ec);
-                }
-                bytelist[i] = curchar;
-            }
-            EncrypedText = bytelist;
-            textBox2.Text = Encoding.ASCII.GetString(EncrypedText).Replace("\0", "\\0");
-
-        }
-        private void DecryptText()
-        {
-            byte[] bytelist = EncrypedText;
-            
-            for (int i = 0; i < EncrypedText.Length; i++)
-            {
-                byte curchar = EncrypedText[i];
-
-                foreach (byte ec in EncryptionKeychain)
-                {
-                    curchar = (byte)(curchar ^ ec);
-                }
-                bytelist[i] = curchar;
-            }
-
-            textBox1.Text = Encoding.ASCII.GetString(bytelist);
-        }
-
+        
         private void Button2_Click(object sender, EventArgs e)
         {
-            DecryptText();
+          
+            byte[] decrypted_result = EncryptObject.XorDecrypt(EncryptedText,  HARDCODED_PASSWORD);
+            textBox1.Text = Encoding.ASCII.GetString(decrypted_result);
         }
     }
 }
